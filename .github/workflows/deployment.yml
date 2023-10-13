@@ -46,6 +46,7 @@ jobs:
         run: 
           pip install --upgrade pip 
           pip install build
+          pip install git+https://git+https://github.com/spdk/spdk.git#subdirectory=python/spdk
       - name: Build application # 
         run: python -m build
       - name: Deploy
