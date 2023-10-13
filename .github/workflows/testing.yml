@@ -13,6 +13,6 @@ jobs:
           python-version: '3.x'
       # run: npm install # for installin Node.js we can use npm ci 
       - name: Install dependencies
-        run: pip install #pip install # for Python installing
+        run: pip install --upgrade pip #pip install # for Python installing
       - name: Test application # testing our application
         run: pip test
