@@ -18,7 +18,6 @@ jobs:
         run: pip install pytest
   lint:
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - name: Get repository code
         # run: echo
@@ -31,7 +30,9 @@ jobs:
       - name: Install dependencies
         run: pip install --upgrade pip #pip install # for Python installing
       - name: Lint application Lint with Ruff # 
-        run: pip install ruff
+        run: 
+          pip install ruff
+          black --check --diff
   build:
       runs-on: ubuntu-latest
       needs: lint
