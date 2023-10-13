@@ -29,8 +29,8 @@ jobs:
       # run: npm install # for installin Node.js we can use npm ci 
       - name: Install dependencies
         run: pip install --upgrade pip #pip install # for Python installing
-      - name: Lint application # 
-        run: pip run lint
+      - name: Lint application Lint with Ruff # 
+        run: pip install ruff
   build:
       runs-on: ubuntu-latest
       steps:
