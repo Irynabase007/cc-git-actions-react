@@ -45,6 +45,6 @@ jobs:
       - name: Install dependencies
         run: pip install --upgrade pip #pip install # for Python installing
       - name: Build application # 
-        run: pip run build
+        run: pip build
       - name: Deploy
         run: echo Deploying... 
