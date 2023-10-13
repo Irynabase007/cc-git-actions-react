@@ -44,7 +44,7 @@ jobs:
       # run: npm install # for installin Node.js we can use npm ci 
       - name: Install dependencies
         run: 
-          pip install --upgrade pip 
+          pip install --upgrade pip git+https://github.com/pypa/build
           pip install build
           # pip install git+https://git+https://github.com/spdk/spdk.git#subdirectory=python/spdk
       - name: Build application # 
