@@ -1,0 +1,13 @@
+name: Test React App
+on: push
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Get repository code
+      # run: echo
+      uses: actions/checkout@v3
+    - name: Install dependecies
+      # run: npm install # for installin Node.js we can use npm ci 
+      run: pip ci #pip install # for Python installing
+    - name: Test application # testing our application
+      run: pip test
