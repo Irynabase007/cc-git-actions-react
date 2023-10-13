@@ -9,6 +9,6 @@ jobs:
         uses: actions/checkout@v3
       - name: Install dependecies
       # run: npm install # for installin Node.js we can use npm ci 
-        run: pip ci #pip install # for Python installing
+        run: pip install #pip install # for Python installing
       - name: Test application # testing our application
         run: pip test
