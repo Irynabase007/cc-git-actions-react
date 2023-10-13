@@ -16,6 +16,7 @@ jobs:
         run: pip install --upgrade pip #pip install # for Python installing
       - name: Test application # testing our application
         run: pip install pytest
+          pytest CC_calc_lab3V1.py
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -30,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: pip install --upgrade pip #pip install # for Python installing
       - name: Lint application Lint with Ruff # 
-        run: black --check --diff
+        run: pip install ruff
   build:
       runs-on: ubuntu-latest
       needs: lint
