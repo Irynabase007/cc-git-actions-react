@@ -47,6 +47,6 @@ jobs:
           pip install --upgrade pip 
           pip install build
       - name: Build application # 
-        run: pip buid
+        run: python -m build
       - name: Deploy
         run: echo Deploying... 
