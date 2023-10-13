@@ -45,9 +45,11 @@ jobs:
       - name: Install dependencies
         run: 
           pip install --upgrade pip git+https://github.com/pypa/build
-          pip install build
+          python -m sysconfig
           # pip install git+https://git+https://github.com/spdk/spdk.git#subdirectory=python/spdk
       - name: Build application # 
-        run: python3 -m build
+        run: 
+          pip install build
+          python3 -m build
       - name: Deploy
         run: echo Deploying... 
