@@ -18,7 +18,7 @@ jobs:
       - name: Install pytest
         run: pip install pytest
       - name: Test application # testing our application
-        run: pytest CC_calc_lab3V1.py
+        run: pytest -s CC_calc_lab3V1.py
   lint:
     runs-on: ubuntu-latest
     steps:
