@@ -1,0 +1,28 @@
+name: Deploy React App
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository code
+        # run: echo
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.x'
+      # run: npm install # for installin Node.js we can use npm ci 
+      - name: Install dependencies
+        run: 
+          pip install --upgrade pip
+          pip install build
+      - name: Test application # testing our application
+        run: pip install pytest
+      - name: Lint application Lint with Ruff # 
+        run: pip install ruff
+      - name: Build application
+        run: 
+          python -m sysconfig
+          python3 -m build
+      - name: Deploy
+        run: echo Deploying... 
